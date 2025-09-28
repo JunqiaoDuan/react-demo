@@ -1,36 +1,118 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+################################################################################
+# Global/OS/Editor
+################################################################################
+# OS
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
+# Editors/IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+*.log
 
-# local env files
-.env*.local
+################################################################################
+# Frontend (React)
+# Works for CRA, Vite, Next.js, Storybook, Cypress/Playwright, etc.
+# Assume frontend lives in /frontend; remove the prefix if your layout differs.
+################################################################################
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.parcel-cache/
+frontend/.vite/
+frontend/.turbo/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+
+# Testing/Coverage
+frontend/coverage/
+frontend/.nyc_output
+frontend/.jest/
+frontend/.jest-cache/
+frontend/playwright-report/
+frontend/test-results/
+frontend/cypress/screenshots/
+frontend/cypress/videos/
+
+# Lint/Tools caches
+frontend/.eslintcache
+frontend/.stylelintcache
+
+# Env files (keep example)
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Misc frameworks
+frontend/.expo/
+frontend/.expo-shared
+frontend/web-build
+frontend/storybook-static
+
+# Package manager caches
+frontend/.npm/
+frontend/.pnpm-store/
+
+################################################################################
+# Backend (ASP.NET / .NET)
+# Assume backend lives in /backend; remove the prefix if your layout differs.
+################################################################################
+# Build outputs
+backend/[Bb]in/
+backend/[Oo]bj/
+backend/[Aa]rtifacts/
+backend/TestResults/
+backend/.vs/
+
+# NuGet
+# Older projects kept packages/ locally; keep build/ inside it if present
+backend/packages/
+!backend/packages/build/
+!backend/packages/repositories.config
+
+# Rider/ReSharper
+backend/_ReSharper*/
+backend/*.[Rr]e[Ss]harper
+backend/.idea/
+
+# ASP.NET local files
+# Consider ignoring local-only appsettings variants
+backend/appsettings.Local.json
+backend/appsettings.*.local.json
+
+# If you prefer to keep launchSettings.json out of git (optional), uncomment:
+# backend/Properties/launchSettings.json
+
+# IIS Express (usually under .vs/, already ignored)
+# Local DBs (optional)
+backend/*.mdf
+backend/*.ldf
+
+################################################################################
+# Root-level Node/monorepo (if you run tools from repo root)
+################################################################################
+node_modules/
+dist/
+build/
+coverage/
 .env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+.env.*
+!.env.example
+.npm/
+.pnpm-store/
+.turbo/
